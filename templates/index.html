@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Barra Colorida</title>
+
+    <style>
+        .top-bar {
+            width: 100%;
+            height: 50px;
+            background-color: #000000; /* Cor preta */
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px; /* Espaço nas laterais */
+        }
+        .top-bar .left {
+            display: flex;
+            gap: 30px; /* Espaço entre as palavras */
+        }
+        .top-bar span {
+            color: #808080; /* Cor cinza */
+            font-size: 20px;
+        }
+        .top-bar span:hover {
+            color: #FFFFFF; /* Cor branca ao passar o mouse */
+        }
+        .top-bar .right {
+            margin-right: 80px; /* Espaço antes do fim da barra */
+            cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+        }
+        .top-bar .right:hover {
+            color: #FFFFFF; /* Cor branca ao passar o mouse */
+        }
+        body {
+            margin: 0;
+            padding-top: 50px; /* Espaço para a barra */
+        }
+        .main-heading {
+            margin-left: 40px; /* Espaço antes do texto */
+        }
+        hr {
+            margin-left: 40px; /* Espaço no início da linha */
+            margin-right: 40px; /* Espaço no fim da linha */
+        }
+    </style>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="left">
+            <span>Flasky</span>
+            <span>Home</span>
+        </div>
+        <span class="right" onclick="window.location.href='log.html'">Log in</span>
+    </div>
+    <div>
+        <h1 class="main-heading">Hello, stranger!</h1>
+        <hr>
+        <p class="main-heading">Oi, estranho!</p>
+    </div>
+</body>
+</html>
