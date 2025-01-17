@@ -31,6 +31,10 @@
         }
         .top-bar .right {
             margin-right: 80px; /* Espaço antes do fim da barra */
+            cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+        }
+        .top-bar .right:hover {
+            color: #FFFFFF; /* Cor branca ao passar o mouse */
         }
         body {
             margin: 0;
@@ -43,9 +47,6 @@
             margin-left: 40px; /* Espaço no início da linha */
             margin-right: 40px; /* Espaço no fim da linha */
         }
-        form input {
-            margin-left: 40px; /* Espaço antes do campo do formulário */
-        }
     </style>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
@@ -53,25 +54,18 @@
 <body>
     <div class="top-bar">
         <div class="left">
-            <span>Flasky</span>
-            <span>Home</span>
+            <span>Avaliação Semestral</span>
+            <span>Cadastro de Profesores</span>
+            <span>Cadastro de Disciplinas</span>
+            <span>Cadastro de Alunos</span>
+            <span>Cadastro de Cursos</span>
         </div>
-        <span class="right">Log in</span>
+        <span class="right" onclick="window.location.href='log.html'">Cadastro de Ocorrências</span>
     </div>
     <div>
-        <h1 class="main-heading">Log in</h1>
+        <h1 class="main-heading">NÃO DISPONÍVEL</h1>
         <hr>
-        <h3><p class="main-heading">email</p></h3>
-        <form>
-            <input type="email" name="email" placeholder="Enter your email" required>
-        </form>
-        <h3><p class="main-heading">password</p></h3>
-        <form>
-            <input type="password" name="password" placeholder="Enter your password" required>
-        </form>
-        <p class="main-heading">Keep me logged in</p>
-        <p class="main-heading">Forgot your password? Click here to reset it.</p>
-        <p class="main-heading">New user? Click here to register.</p>
+        <p class="main-heading">A data e hora local é Janeiro, 16 de 2025. 20h52.</p>
     </div>
 </body>
 </html>
